@@ -1,21 +1,18 @@
-// DOM elemanlarını yakala
 const form = document.getElementById("todo-form");
 const input = document.getElementById("todo-input");
 const list = document.getElementById("todo-list");
 
-// Başlangıçta localStorage'dan listeyi yükle
 document.addEventListener("DOMContentLoaded", loadTodosFromStorage);
 
-// Form submit olduğunda
 form.addEventListener("submit", function (e) {
     e.preventDefault();
 
     const todoText = input.value.trim();
     if (todoText === "") return;
 
-    addTodoToList(todoText);        // Ekrana yaz
-    saveTodoToLocalStorage(todoText); // Kaydet
-    input.value = ""; // input temizle
+    addTodoToList(todoText);
+    saveTodoToLocalStorage(todoText);
+    input.value = "";
 });
 
 
