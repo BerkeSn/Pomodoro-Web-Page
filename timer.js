@@ -94,5 +94,4 @@ breakBtn.addEventListener("click", (e) => {
     pauseTimer();
 });
 
-// Başlangıç için varsayılan sıfır göster
 setTimer(0);
