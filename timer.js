@@ -29,9 +29,13 @@ function startTimer() {
             remainingTime--;
             updateDisplay();
         } else if (remainingTime === 0) {
-            clearInterval(timer);
-            timer = null;
-            alert("Times Up!");
+    clearInterval(timer);
+    timer = null;
+
+    const alarmSound = document.getElementById("alarm-sound");
+    alarmSound.currentTime = 0;
+    alarmSound.play();
+    
         }
     }, 1000);
 }
